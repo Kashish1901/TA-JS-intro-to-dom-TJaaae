@@ -1,11 +1,11 @@
 // Select the h1 element and store it in a variable named heading.
-
+let heading = document.body.children[0].children[0];
 // Check the typeof heading and log it.
-
+typeof heading;
 // Change the color of heading to black.
-
+heading.style.color = "black";
 // Select all the hr elements and store it in a variable named allHrs using querySelectorAll
-
+let allHrs = document.querySelectorAll('hr'); 
 /* 
 Convert the NodeList returned by querySelectorAll to Array using Array.from() or spread operator and store it in allHrsArray
 
@@ -24,7 +24,7 @@ let allHrsArray = Array.from(allHrs)
 // Change the alignment of the heading(h1) to center.
 
 // Change the font size of the heading to 3rem.
-
+heading.style.fontSize = "3rem";
 // Change the border of hr with class 'image' to `2px solid purple`.
 
 // Hide the box number 17 (last box).
@@ -78,7 +78,7 @@ Do the following after selecting box 16 and storing in variable named box16
 // Using the remove classList proeprty remove the class `awesome-box` from box 4
 
 // Change the background of the body to bisque
-
+document.body.style.backgroundColor = "bisque" 
 // Create a button and store it in a variable named 'btn'
 
 // textContent of the button should be 'Click Me'
