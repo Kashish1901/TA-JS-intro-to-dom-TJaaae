@@ -1,4 +1,5 @@
-books = [
+let allBooks = {
+books : [
       {
         isbn: "9781593275846",
         title: "Eloquent JavaScript, Second Edition",
@@ -114,26 +115,28 @@ books = [
         website: "https://shichuan.github.io/javascript-patterns/",
       },
     ]
-let ul = document.querySelector('ul');
+}
 
-    books.forEach((char) =>{
+
+    let ul = document.querySelector('ul');
+
+    allBooks.books.forEach((book) =>{
         let li = document.createElement('li');
         let img = document.createElement('img');
-        img.src = char.image;
+        img.src = book.image;
+        img.alt = book.title;
         let h2= document.createElement('h2');
-        h2.innerText = char.title;
-        let h3 = document.createElement('h3');
-        h3.innerText = char.author;
-        let btn = document.createElement('button');
-        btn.innerText = "Buy Now";
-        btn.style.backgroundColor = "rgb(55,126,128)";
-        btn.style.color = "white";
-        btn.style.padding = ".5rem";
-        btn.style.borderRadius = ".4rem";
-btn.style.border = "0"
-        li.append(img , h2 , h3 , btn);
+        h2.innerText = book.title;
+        let p = document.createElement('p');
+       p.innerText = "Author:"
+        let span = document.createElement('span');
+       span.innerText = book.author
+        p.append(span);
+        li.append(img , h2 , p);
 
         ul.append(li);
+
+        console.log(li);
     }
     )
-    btn.style.backgroundColor = "rgb(55,126,128)";
+   
